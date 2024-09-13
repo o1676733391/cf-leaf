@@ -47,9 +47,13 @@ const Upload = () => {
       />
       <select onChange={handleLabelChange} className={styles.select}>
         <option value="">Select Label</option>
-        <option value="label1">Label 1</option>
-        <option value="label2">Label 2</option>
-        <option value="label3">Label 3</option>
+        <option value="label1">Rust</option>
+        <option value="label2">Healthy</option>
+        <option value="label3">Miner</option>
+        <option value="label4">RSM</option>
+        <option value="label5">Rot</option>
+        <option value="label6">Anthracnose</option>
+        
       </select>
       <button onClick={handleUpload} className={styles.button}>Upload</button>
       {error && <p className={styles.error}>{error}</p>}
