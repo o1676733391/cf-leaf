@@ -1,0 +1,73 @@
+/* components/Upload.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000000;
+  }
+  
+  .input, .select, .button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    font-size: 16px;
+  } 
+  
+  .button {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #005bb5;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .image {
+    margin-top: 20px;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .title {
+      font-size: 20px;
+    }
+  
+    .input, .select, .button {
+      font-size: 14px;
+    }
+    /* Upload.module.css */
+
+  }
+
+  .text-black {
+    color: #000000;
+  }
+  .select {
+    color: black; /* Add this rule */
+  }
