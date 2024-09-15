@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "file-saver": "^2.0.5",
     "file-server": "^2.2.1",
     "firebase": "^10.13.1",
     "jszip": "^3.10.1",

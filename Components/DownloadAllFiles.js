@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { storage } from '../firebaseConfig';
 import { ref, listAll, getDownloadURL } from "firebase/storage";
 import JSZip from 'jszip';
-import { saveAs } from 'file-server';
+import { saveAs } from 'file-saver'; // Corrected import
 import styles from './DownloadAllFiles.module.css';
 
 const DownloadAllFiles = () => {
