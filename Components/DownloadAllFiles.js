@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react';
 import { storage } from '../firebaseConfig';
 import { ref, listAll, getDownloadURL } from "firebase/storage";
+import JSZip from 'jszip';
+import { saveAs } from 'file-saver';
 import styles from './DownloadAllFiles.module.css';
 
 const DownloadAllFiles = () => {
@@ -27,6 +29,22 @@ const DownloadAllFiles = () => {
     fetchFiles();
   }, []);
 
+  const handleDownloadAll = async () => {
+    const zip = new JSZip();
+    const folder = zip.folder("files");
+
+    const filePromises = files.map(async (file) => {
+      const response = await fetch(file.url);
+      const blob = await response.blob();
+      folder.file(file.name, blob);
+    });
+
+    await Promise.all(filePromises);
+
+    const content = await zip.generateAsync({ type: "blob" });
+    saveAs(content, "files.zip");
+  };
+
   return (
     <div className={styles.container}>
       <h2>Download Files</h2>
@@ -40,6 +58,9 @@ const DownloadAllFiles = () => {
           </li>
         ))}
       </ul>
+      <button onClick={handleDownloadAll} className={styles.downloadButton}>
+        Download All as Zip
+      </button>
     </div>
   );
 };

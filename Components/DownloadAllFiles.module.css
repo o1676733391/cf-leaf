@@ -1,26 +1,39 @@
 /* components/DownloadAllFiles.module.css */
 .container {
-    padding: 20px;
-  }
-  
-  .error {
-    color: red;
-  }
-  
-  .fileList {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .fileItem {
-    margin: 10px 0;
-  }
-  
-  .fileLink {
-    color: blue;
-    text-decoration: none;
-  }
-  
-  .fileLink:hover {
-    text-decoration: underline;
-  }
+  padding: 20px;
+}
+
+.error {
+  color: red;
+}
+
+.fileList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.fileItem {
+  margin: 10px 0;
+}
+
+.fileLink {
+  color: blue;
+  text-decoration: none;
+}
+
+.fileLink:hover {
+  text-decoration: underline;
+}
+
+.downloadButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.downloadButton:hover {
+  background-color: #0056b3;
+}
